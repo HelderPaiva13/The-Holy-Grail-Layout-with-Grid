@@ -1,7 +1,6 @@
 
  .container {
   display: grid;
-  
   margin-left: 5%;
   margin-right: 5%;
   grid-template:  100px 100px 500px 100px / 22.5% 67.5% ;  
@@ -19,12 +18,14 @@
 
 
 .container  > div {
-  align-items: center;
+  padding: 10px;
+  font-size: 2rem;
+  color: white;
   border: solid 2px black;
   border-radius: 10px;
-  //o y no final do overflow é para indicar barra de rolatem 
-  //apenas no eixo Y
   overflow-y: auto;
+  /* o y no final do overflow é para indicar barra de rolatem 
+  apenas no eixo Y */
 }
 
 .header {
@@ -53,3 +54,8 @@
   grid-area:footer;
   background-color: lightgray;
 } 
+
+p {
+  font-size: 1rem;
+  color: black;
+}
