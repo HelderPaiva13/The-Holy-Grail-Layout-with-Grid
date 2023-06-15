@@ -1,0 +1,53 @@
+
+ .container {
+  display: grid;
+  margin-left: 5%;
+  margin-right: 5%;
+  grid-template:  100px 100px 500px 100px / 22.5% 67.5% ;  
+  gap: 15px;
+  text-align: center;
+  grid-template-areas:
+  "header header"
+  "sidbar nav"
+  "sidbar article"
+  "footer footer"
+
+  
+    
+}
+
+
+.container  > div {
+  border: solid 2px black;
+  border-radius: 10px;
+  //o y no final do overflow é para indicar barra de rolatem 
+  //apenas no eixo Y
+  overflow-y: auto;
+}
+
+.header {
+  grid-area: header;
+  background-color: lightgreen;
+  border-raius: 10px;
+}
+
+.sidbar {
+  grid-area: sidbar;
+  background-color: lightblue;
+}
+
+.nav {
+  grid-area:nav;
+  background-color: purple;
+}
+
+.article {
+  display: flex-wrap;
+  grid-area:article;
+  background-color: lightpink;
+}
+
+.footer {
+  grid-area:footer;
+  background-color: lightgray;
+} 
