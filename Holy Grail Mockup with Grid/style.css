@@ -1,11 +1,13 @@
 
+ * {
+  margin: 0;
+  padding: 0;
+ }
+
  .container {
   display: grid;
-  margin-left: 5%;
-  margin-right: 5%;
-  grid-template:  1fr 1fr 5fr 1fr / 1fr 3fr ;  
-  gap: 15px;
-  text-align: center;
+  grid-template-columns: 1fr 4fr ;  
+  gap: 4px;
   grid-template-areas:
   "header header"
   "sidbar nav"
@@ -16,38 +18,62 @@
     
 }
 
-
-.container  > div {
-  padding: 10px;
-  font-size: 2rem;
-  color: white;
-  border: solid 2px black;
-  border-radius: 10px;
-  overflow-y: auto;
-  /* o y no final do overflow é para indicar barra de rolatem 
-  apenas no eixo Y */
-}
-
 .header {
   grid-area: header;
+  grid-template-columns: 1fr 4fr;
   background-color: lightgreen;
   border-raius: 10px;
+  display: grid;  
+}
+
+.logo {
+  justify-self: center;
+}
+
+.menu {
+  align-self: center;
+}
+
+.menu ul  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .sidbar {
   grid-area: sidbar;
   background-color: lightblue;
+  gap: 50px;
+  
 }
 
-.nav {
+.side-content,
+.photo {
+  display: grid;
+  align-items: center;
+}
+
+.nav ul {
+  display: grid;
   grid-area:nav;
   background-color: purple;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .article {
-  display: flex-wrap;
+  display: grid;
   grid-area:article;
-  background-color: lightpink;
+  background-color: gray;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  height: 200px;
+  background-color: white;
+}
+
+.title {
+
 }
 
 .footer {
@@ -55,7 +81,12 @@
   background-color: lightgray;
 } 
 
-p {
-  font-size: 1rem;
-  color: black;
+
+a {
+  text-cecoration: none;
+  
+}
+
+li, ul {
+  list-style-type: none;
 }
